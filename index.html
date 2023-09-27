@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Atividade 3</title>
+</head>
+<body class="bg-dark" onload="buscarCorridas()">
+    <div class="container-fluid p-5 text-white">
+        <h2>Site de atividades</h2>
+        <div class="container-fluid p-5 bg-white rounded">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label class="text-black">Data</label>
+                    <input type="date" name="data" id="data" class="form-control" />
+                </div>
+                <div class="col-sm-2">
+                    <label class="text-black">Distância</label>
+                    <input type="number" name="distancia" id="distancia" placeholder="10km" class="form-control" />
+                </div>
+                <div class="col-sm-2">
+                    <label class="text-black">Tempo</label>
+                    <input type="number" name="tempo" id="tempo" placeholder="tempo" class="form-control" />
+                </div>
+                <div class="col-sm-2">
+                    <label class="text-black">Ganho de elevação</label>
+                    <input type="number" name="ganho de elevacao" id="ganhoElevacao" placeholder="Ganho de elevação" class="form-control" />
+                </div>                
+                <div class="col-sm">
+                    <label></label>
+                    <button type="button" class="btn btn-primary form-control" id="enviarNome" onclick="salvar()" >Salvar</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 my-3">
+                <nav class="navbar bg-white rounded ">
+                    <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html">Registrar corrida</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="corridas.html">Visualizar corridas</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="metricas.html">Visualizar métricas</a>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
+                <div class="">
+                    <img class=" img-fluid mt-3 rounded" alt="Cachorro dançando" src="https://cdn.dicionariopopular.com/imagens/numero-nove.gif">
+                </div>
+            </div>
+            <div class="col-sm text-center my-4">
+                <table class="table table-hover table-bordered" id="tabela">
+                    <thead><tr>
+                        <th id="data-titulo-tabela" onclick="filtrarPorData()">Data</th>
+                        <th>Distância</th>
+                        <th>Tempo</th>
+                        <th>Ganho de elevação</th>
+                    </tr>
+                </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>buscarCorridas()</script>
+</body>
+</html>
